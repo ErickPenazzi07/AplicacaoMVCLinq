@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AplicacaoMVCLinq.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Clientes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Nascimento</th>
+        </tr>
+
+    <tbody>
+
+            @foreach (var Cliente in Model)
+            {
+            <tr>
+                <td>@Cliente.Id</td>
+                <td>@Cliente.Nome</td>
+                <td>@Cliente.Email</td>
+                <td>@Cliente.Telefone</td>
+                <td>@Cliente.DataNasc</td>
+            </tr>
+            }
+    </tbody>
+
+    </thead>
+</table>
